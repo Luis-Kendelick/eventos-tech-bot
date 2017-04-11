@@ -1,26 +1,26 @@
 {
-  "name": "pei-bot",
+  "name": "eventos-tech-bot",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "engines": {
-    "node": "7.8.0",
-    "npm": "4.2.0"
+  "dependencies": {
+    "telegram-node-bot": "^4.0.5"
   },
+  "devDependencies": {},
   "scripts": {
-    "start": "cd src && nodemon app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MarcoBrunoBR/pei-bot.git"
+    "url": "git+https://github.com/MarcoBrunoBR/eventos-tech-bot.git"
   },
+  "keywords": [
+    "chatbot"
+  ],
   "author": "Marco Bruno",
   "license": "MPL-2.0",
   "bugs": {
-    "url": "https://github.com/MarcoBrunoBR/pei-bot/issues"
+    "url": "https://github.com/MarcoBrunoBR/eventos-tech-bot/issues"
   },
-  "homepage": "https://github.com/MarcoBrunoBR/pei-bot#readme",
-  "dependencies": {
-    "telegram-node-bot": "^4.0.5"
-  }
+  "homepage": "https://github.com/MarcoBrunoBR/eventos-tech-bot#readme"
 }
