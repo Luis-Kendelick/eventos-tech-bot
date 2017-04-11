@@ -1,0 +1,23 @@
+{
+  "name": "pei-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "engines": {
+    "node": "7.8.0",
+    "npm": "4.2.0"
+  },
+  "scripts": {
+    "start": "cd src && nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcoBrunoBR/pei-bot.git"
+  },
+  "author": "Marco Bruno",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/MarcoBrunoBR/pei-bot/issues"
+  },
+  "homepage": "https://github.com/MarcoBrunoBR/pei-bot#readme"
+}
