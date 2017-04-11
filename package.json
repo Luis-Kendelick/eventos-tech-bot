@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/MarcoBrunoBR/pei-bot/issues"
   },
-  "homepage": "https://github.com/MarcoBrunoBR/pei-bot#readme"
+  "homepage": "https://github.com/MarcoBrunoBR/pei-bot#readme",
+  "dependencies": {
+    "telegram-node-bot": "^4.0.5"
+  }
 }
