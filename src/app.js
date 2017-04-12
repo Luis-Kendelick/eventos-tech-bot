@@ -3,21 +3,23 @@
 const Telegram = require('telegram-node-bot')
 const TelegramBaseController = Telegram.TelegramBaseController
 const TextCommand = Telegram.TextCommand
-const chat = new Telegram.Telegram('371045027:AAFg6dZiZxJr36qhABQKbgNXsnv7VxkOuiE')
+const chatbot = new Telegram.Telegram('284942668:AAFmynbGtIVr2Ufb1WTiHEggVp09lcXtBm8')
 
 class EventsController extends TelegramBaseController {
-  allEvents(scope) {
-    scope.sendMessage(`QConSP - 24-25-26/04/2017 - qconsp.com\nFrontInSampa - 01/07/2017 - frontinsampa.com.br\nAgileBrazil - 13-14-15/09/2017 - agilebrazil.com/2017`)
+  allEventsAction(scope) {
+    let msg = `QConSP - 24-25-26/04/2017 - qconsp.com\nFrontInSampa - 01/07/2017 - frontinsampa.com.br`
+
+    scope.sendMessage(msg)
   }
 
   get routes() {
     return {
-      'allEvents': 'allEvents'
+      'allEvents': 'allEventsAction'
     }
   }
 }
 
-chat.router
+chatbot.router
     .when(
       new TextCommand('/allevents', 'allEvents'), new EventsController()
     )
