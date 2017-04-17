@@ -1,15 +1,24 @@
 'use strict'
 
+const request = require('request')
+const urlApi = 'http://localhost:3002'
 const Telegram = require('telegram-node-bot')
 const TelegramBaseController = Telegram.TelegramBaseController
 const TextCommand = Telegram.TextCommand
-const chatbot = new Telegram.Telegram('284942668:AAFmynbGtIVr2Ufb1WTiHEggVp09lcXtBm8')
+const chatbot = new Telegram.Telegram('284942668:AAHslGldxSJUzGmog9WKmTh6Jrfn8qL1E70')
 
 class EventsController extends TelegramBaseController {
-  allEventsAction(scope) {
-    let msg = `QConSP - 24-25-26/04/2017 - qconsp.com\nFrontInSampa - 01/07/2017 - frontinsampa.com.br`
-
+  sendMessage(scope, msg) {
     scope.sendMessage(msg)
+  }
+  allEventsAction(scope) {
+    let pathApi = '/allevents'
+    let msg = ''
+
+    request.get(`${urlApi}${pathApi}`, (error, response, body) => {
+      msg += JSON.parse(body).map((event) => `${event.data.toString().replace(/,/g, ' e ')} - ${event.name} - ${event.link}\n`)
+      this.sendMessage(scope, msg)
+    })
   }
 
   get routes() {
