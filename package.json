@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "request": "^2.81.0",
     "telegram-node-bot": "^4.0.5"
   },
   "devDependencies": {},
