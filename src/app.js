@@ -17,7 +17,7 @@ class EventsController extends TelegramBaseController {
 
     request.get(`${urlApi}${pathApi}`, (error, response, body) => {
       msg += JSON.parse(body).map((event) => `${event.data.toString().replace(/,/g, ' e ')} - ${event.name} - ${event.link}\n`)
-      this.sendMessage(scope, msg)
+      this.sendMessage(scope, msg.replace(/,/g, ''))
     })
   }
 
