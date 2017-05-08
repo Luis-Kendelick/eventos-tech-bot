@@ -11,7 +11,7 @@ class EventsController extends TelegramBaseController {
   sendMessage(scope, msg) {
     scope.sendMessage(msg)
   }
-  
+
   allEventsAction(scope) {
     let pathApi = '/allevents'
     let msg = ''
